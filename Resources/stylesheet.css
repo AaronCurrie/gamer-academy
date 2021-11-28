@@ -1,0 +1,263 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --main-blue:rgb(43, 206, 235);
+    --main-pink: rgb(247, 0, 255);
+}
+
+html{
+    font-size: 16px;
+    scroll-behavior: smooth;
+    font-family: 'Outfit';
+}
+
+/* Header Code Follows*/
+header {
+    position: fixed;
+    z-index: 99;
+    height: 10vh;
+    background-color: rgb(43, 206, 235);
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.logo img{
+    height: 20vh;
+    width: auto;
+}
+
+nav {
+    width: 60%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+}
+
+nav a{
+    margin: 0 10px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: black;
+    transition: all 0.3s linear;
+}
+
+nav a:hover {
+    color: White;
+}
+
+nav .apply {
+    border-radius: 5px;
+    background-color: rgb(12, 155, 180);
+    padding: 10px;
+    transition: all 0.5s linear;
+    color: white;
+}
+
+nav .apply:hover {
+    background-color: rgba(128, 0, 128, 0);
+    color: var(--main-pink);
+}
+
+
+/* Hero Code Follows */
+.hero {
+    margin: 10vh auto 0 auto;
+    width: 100%;  
+    display: grid;
+    grid-template: 40% 10% 10% 10% 20% / 30% 10% 10% 10% 10% 30%;
+    height: 90vh;
+    position: relative;
+    
+}
+
+.hero .button {
+    font-family: 'Press Start 2P';
+    grid-area: 2 / 2 / span 1 / span 4;
+    font-size: 3rem;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    transition: all 0.2s linear;
+}
+
+.hero .button:hover {
+    text-shadow: 10px 0 20px rgb(247, 0, 255), -10px 0 20px rgb(247, 0, 255);
+}
+
+.background {
+    grid-area: 1 / 1 / span 5 / span 6;
+    width: 100%;
+    height: 90vh;
+}
+
+
+/* scroll up spaceship*/
+.spaceship{
+    position: fixed;
+    width: 10%;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+    transition: all 5s linear;
+}
+
+.spaceship img{
+    width: 100%;
+}
+
+.spaceship :hover {
+    -webkit-animation: shake 0.5s;
+            animation: shake 0.5s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+}
+
+.spaceship :focus {
+    -webkit-animation: fly 1s;
+            animation: fly 1s;
+}
+
+
+/* Animation Keyframes for spaceship*/
+@-webkit-keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+@-webkit-keyframes fly {
+    0% { transform: translate(0px, -10px); }
+    5% { transform: translate(0px, -50px); }
+    10% { transform: translate(0px, -90px); }
+    15% { transform: translate(0px, -120px); }
+    20% { transform: translate(0px, -160px); }
+    30% { transform: translate(0px, -200px); }
+    35% { transform: translate(0px, -250px); }
+    40% { transform: translate(0px, -300px); }
+    45% { transform: translate(0px, -360px); }
+    50% { transform: translate(0px, -450px); }
+    55% { transform: translate(0px, -600px); }
+    60% { transform: translate(0px, -750px)rotate(180deg); }
+    65% { transform: translate(0px,  -600px)rotate(180deg); }
+    70% { transform: translate(0px, -450px)rotate(180deg); }
+    75% { transform: translate(0px, -360px)rotate(180deg); }
+    78% { transform: translate(0px, -300px)rotate(180deg); }
+    82% { transform: translate(0px, -250px)rotate(180deg); }
+    86% { transform: translate(0px, -200px)rotate(180deg); }
+    90% { transform: translate(0px, -160px)rotate(180deg); }
+    94% { transform: translate(0px, -120px)rotate(180deg); }
+    98% { transform: translate(0px, -60px)rotate(180deg); }
+    100% { transform: translate(0px, -10px)rotate(180deg); }
+}
+
+@keyframes fly {
+    0% { transform: translate(0px, -10px); }
+    5% { transform: translate(0px, -50px); }
+    10% { transform: translate(0px, -90px); }
+    15% { transform: translate(0px, -120px); }
+    20% { transform: translate(0px, -160px); }
+    30% { transform: translate(0px, -200px); }
+    35% { transform: translate(0px, -250px); }
+    40% { transform: translate(0px, -300px); }
+    45% { transform: translate(0px, -360px); }
+    50% { transform: translate(0px, -450px); }
+    55% { transform: translate(0px, -600px); }
+    60% { transform: translate(0px, -750px)rotate(180deg); }
+    65% { transform: translate(0px,  -600px)rotate(180deg); }
+    70% { transform: translate(0px, -450px)rotate(180deg); }
+    75% { transform: translate(0px, -360px)rotate(180deg); }
+    78% { transform: translate(0px, -300px)rotate(180deg); }
+    82% { transform: translate(0px, -250px)rotate(180deg); }
+    86% { transform: translate(0px, -200px)rotate(180deg); }
+    90% { transform: translate(0px, -160px)rotate(180deg); }
+    94% { transform: translate(0px, -120px)rotate(180deg); }
+    98% { transform: translate(0px, -60px)rotate(180deg); }
+    100% { transform: translate(0px, -10px)rotate(180deg); }
+}
+
+/* Global Container Code*/
+
+section {
+    margin: 5% auto;
+    width:80%;
+}
+
+.container {
+    display: flex;
+    margin: 5% auto;
+    gap: 5%;
+}
+
+.box {
+    width: 50%;
+    overflow: hidden;
+}
+  
+.box img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/*Abour Section Styling*/
+
+
+
+/* Link Scroll Locations */
+#About {
+    position: relative;
+    top: -50px;
+}
+
+#Gallery {
+    position: relative;
+    top: -50px;
+}
+
+#Courses {
+    position: relative;
+    top: -50px;
+}
+
+#Teachers {
+    position: relative;
+    top: -50px;
+}
+
+#Whyus {
+    position: relative;
+    top: -50px;
+}
+
