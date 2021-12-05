@@ -6,19 +6,25 @@
 :root {
     --main-blue:rgb(43, 206, 235);
     --main-pink: rgb(247, 0, 255);
+    --darker-blue: rgb(12, 155, 180);
 }
 
 html{
     font-size: 16px;
     scroll-behavior: smooth;
     font-family: 'Outfit';
+    text-align: center;
+}
+
+ul {
+    text-align: left;
 }
 
 /* Header Code Follows*/
 header {
     position: fixed;
     z-index: 99;
-    height: 10vh;
+    height: 100px;
     background-color: rgb(43, 206, 235);
     width: 100%;
     top: 0;
@@ -29,7 +35,7 @@ header {
 
 
 .logo img{
-    height: 20vh;
+    height: 200px;
     width: auto;
 }
 
@@ -39,6 +45,7 @@ nav {
     justify-content: flex-end;
     align-items: center;
     text-align: center;
+    overflow: hidden;
 }
 
 nav a{
@@ -70,7 +77,7 @@ nav .apply:hover {
 
 /* Hero Code Follows */
 .hero {
-    margin: 10vh auto 0 auto;
+    margin: 100px auto 0 auto;
     width: 100%;  
     display: grid;
     grid-template: 40% 10% 10% 10% 20% / 30% 10% 10% 10% 10% 30%;
@@ -218,20 +225,130 @@ section {
     display: flex;
     margin: 5% auto;
     gap: 5%;
+    overflow: hidden;
+    flex-wrap: wrap;
 }
 
 .box {
-    width: 50%;
-    overflow: hidden;
+    min-width: 350px;
+    max-width: 45%;
+    margin: 10px 0;
 }
   
 .box img {
     max-width: 100%;
-    height: auto;
+    min-width: 350px;
+    height:auto;
     display: block;
+    overflow: visible;
 }
 
-/*Abour Section Styling*/
+.second {
+    background-color: var(--main-blue);
+    padding: 2% 5% 2% 5%;
+}
+
+/*About Section Styling*/
+
+.about strong{
+    color: var(--darker-blue);
+}
+
+.about h2{
+    margin: 10px;
+}
+
+.about h3{
+    margin: 10px;
+}
+
+.about p{
+    margin: 10px;
+}
+
+.about ul {
+    margin: 10px;
+    list-style: none;
+}
+
+.list{
+    border: 2px var(--darker-blue) solid;
+}
+
+.about .box h3{
+    color: var(--darker-blue)
+}
+
+.fa {
+    color: var(--darker-blue)
+}
+
+/*Gallery Styling*/
+
+
+.big {
+    width: 100%;
+}
+
+.big img{
+    width:88%;
+    max-width: 800px;
+    display: block;
+    margin: 10px auto;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery img {
+    width:22%;
+}
+
+/*Courses Section*/
+.course {
+    border: 1px rgba(255, 255, 255, 0.521) solid;
+    padding: 10px;
+    width: 40%;
+    margin: 10px;
+    min-width: 300px;
+    text-align: left;
+}
+
+.courses h2 {
+    text-align: center;
+}
+
+.courses a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.second strong {
+    color: white;
+}
+
+h2{
+    font-size: 2.5rem;
+    margin-bottom: 2%;
+}
+
+/* Why Us section*/
+
+.whyus img{
+    width: 100%;
+    max-width: 800px;
+    border: 5px var(--darker-blue) solid;
+    display: block;
+    margin: auto;
+}
+
 
 
 
@@ -243,7 +360,7 @@ section {
 
 #Gallery {
     position: relative;
-    top: -50px;
+    top: -100px;
 }
 
 #Courses {
@@ -260,4 +377,3 @@ section {
     position: relative;
     top: -50px;
 }
-
