@@ -227,6 +227,7 @@ section {
     gap: 5%;
     overflow: hidden;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .box {
