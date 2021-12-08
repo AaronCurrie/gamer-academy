@@ -14,6 +14,7 @@ html{
     scroll-behavior: smooth;
     font-family: 'Outfit';
     text-align: center;
+    box-sizing: border-box;
 }
 
 ul {
@@ -24,7 +25,7 @@ ul {
 header {
     position: fixed;
     z-index: 99;
-    height: 100px;
+    height: 80px;
     background-color: rgb(43, 206, 235);
     width: 100%;
     top: 0;
@@ -33,10 +34,16 @@ header {
     align-items: center;
 }
 
-
 .logo img{
-    height: 200px;
+    height: 160px;
     width: auto;
+}
+
+.logo img:hover{
+    -webkit-animation: shake 0.5s;
+            animation: shake 0.5s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
 }
 
 nav {
@@ -74,10 +81,20 @@ nav .apply:hover {
     color: var(--main-pink);
 }
 
+/* Page load animation*/
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 
 /* Hero Code Follows */
 .hero {
-    margin: 100px auto 0 auto;
+    margin: 80px auto 0 auto;
     width: 100%;  
     display: grid;
     grid-template: 40% 10% 10% 10% 20% / 30% 10% 10% 10% 10% 30%;
@@ -88,21 +105,30 @@ nav .apply:hover {
 
 .hero .button {
     font-family: 'Press Start 2P';
-    grid-area: 2 / 2 / span 1 / span 4;
-    font-size: 3rem;
+    grid-area: 2 / 1 / span 1 / span 6;
+    font-size: 2.5rem;
     color: white;
     border-radius: 10px;
     text-align: center;
     text-decoration: none;
     width: 100%;
     transition: all 0.2s linear;
+    animation: 4s ease-in 0s 1 fadein;
 }
 
 .hero .button:hover {
     text-shadow: 10px 0 20px rgb(247, 0, 255), -10px 0 20px rgb(247, 0, 255);
+    font-size: 3rem;
 }
 
 .background {
+    grid-area: 1 / 1 / span 5 / span 6;
+    width: 100%;
+    height: 90vh;
+}
+
+.background-small {
+    display: none;
     grid-area: 1 / 1 / span 5 / span 6;
     width: 100%;
     height: 90vh;
@@ -113,6 +139,7 @@ nav .apply:hover {
 .spaceship{
     position: fixed;
     width: 10%;
+    min-width: 80px;
     bottom: 0;
     right: 0;
     cursor: pointer;
@@ -234,6 +261,7 @@ section {
     min-width: 350px;
     max-width: 45%;
     margin: 10px 0;
+    text-align: left;
 }
   
 .box img {
@@ -251,7 +279,7 @@ section {
 
 /*About Section Styling*/
 
-.about strong{
+strong{
     color: var(--darker-blue);
 }
 
@@ -308,6 +336,7 @@ section {
 
 .gallery img {
     width:22%;
+    min-width: 250px;
 }
 
 /*Courses Section*/
@@ -329,6 +358,11 @@ section {
     text-decoration: none;
     font-size: 1.5rem;
     font-weight: 600;
+    transition: all 0.5s linear;
+}
+
+.courses a:hover {
+    color: var(--main-pink)
 }
 
 .second strong {
@@ -338,6 +372,7 @@ section {
 h2{
     font-size: 2.5rem;
     margin-bottom: 2%;
+    padding: 1rem;
 }
 
 /* Why Us section*/
@@ -348,10 +383,116 @@ h2{
     border: 5px var(--darker-blue) solid;
     display: block;
     margin: auto;
+    gap: 1rem;
 }
 
+.box #careers{
+    padding: 1.5rem;
+    display: grid;
+    gap: 20px;
+    grid-template: 1.5rem / 1fr 1fr;
+    grid-auto-rows: 1.5rem;
+    align-items: flex-end;
+}
 
+/*Form Styling*/
+.form{
+    width:80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.form h2{
+    width: 100%;
+}
 
+form {
+    text-align: left;
+}
+
+input[type=text] {
+    width:100%;
+}
+
+input[type=number] {
+    width:100%;
+}
+
+input {
+    padding: 10px;
+    margin: 10px 5px;
+}
+
+input[type=radio]:hover {
+    cursor: pointer;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 5px;
+}
+
+label {
+    padding: 5px;
+}
+
+form p {
+    margin: 10px 0;
+}
+
+input[type=submit] {
+    width:100%;
+    margin: 20px 0;
+    background-color: var(--darker-blue);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 10px;
+    border: 1px solid var(--darker-blue);
+    transition: all 0.5s linear;
+}
+
+input[type=submit]:hover {
+    background-color: rgba(128, 0, 128, 0);
+    color: var(--main-pink);
+    border: 1px solid var(--main-blue);
+    cursor: pointer;
+    
+}
+
+/* Footer*/
+footer {
+    width: 100%;
+    height: 65px;
+    background-color: var(--main-blue);
+}
+
+.footer nav{
+    padding: 0 10px;
+}
+
+.footer nav .fa{
+    color: black;
+    padding: 10px;
+    transition: all 0.5s linear;
+}
+
+.footer nav .fa:hover{
+    color: white;
+}
+
+.footer {
+    height: 65px;
+    width: 80%;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+}
+
+.social-small {
+    display: none;
+}
 
 /* Link Scroll Locations */
 #About {
@@ -376,5 +517,66 @@ h2{
 
 #Whyus {
     position: relative;
-    top: -50px;
+    top: -100px;
+}
+
+#Apply {
+    position: relative;
+    top: -100px;   
+}
+
+
+/* Responsiveness */
+
+@media only screen and (max-width: 768px) {
+    .background img{
+        display: hidden;
+    }
+
+    .hero .button {
+        font-size: 1.5rem;
+    }
+
+    .hero .button:hover {
+        font-size: 2rem;
+    }
+
+    .social {
+        display: none;
+    }
+
+    .social-small {
+        display: inherit;
+        margin-right: 20px;
+    }
+
+    .footer nav .fa{
+        padding: 5px;
+    }
+
+    .gallery img {
+        width:88%;
+    }
+
+    .background {
+        display: none;
+    }
+
+    .background-small {
+        display: inherit;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav a{
+        margin: 0 2%;
+        font-size: 1.1rem;
+    }
+
 }

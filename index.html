@@ -6,7 +6,7 @@
 
     <link rel="stylesheet" type="text/css" href="Resources/stylesheet.css">
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,14 +31,17 @@
             <a href="#Gallery">Gallery</a>
             <a href="#Courses">Courses</a>
             <a href="#Whyus">Why Us</a>
-            <a href="#"><div class="apply">Apply Now</div></a>
+            <a href="#Apply"><div class="apply">Apply Now</div></a>
         </nav>
     </header>
 
     <main>
         <section class="hero">
             <img class="background" src="Resources/Images/Game design.png" alt="space background">
-            <a href="#" class="button">Start Learning</a>
+            <img class="background-small" src="Resources/Images/background-small.jpg" alt="space background">
+            <a href="#Apply" class="button">
+                Start<br>Learning
+            </a>
             <a href="#" class="spaceship">
                <img tabindex='1' src="Resources/Images/pinpng.com-space-ship-png-313268.png" alt="spaceship">
             </a>
@@ -53,7 +56,7 @@
             
             <div class="container">
                 <div class="box">
-                    <img src="Resources/Images/pexels-ivan-samkov-5676744.jpg" alt="students hangind out">
+                    <img src="Resources/Images/pexels-ivan-samkov-5676744.jpg" alt="students hanging out">
                 </div>               
                 <div class="box list">
                     <h3>Why study Game Design at Gamer Academy?</h3>
@@ -132,31 +135,100 @@
             <img src="Resources/Images/companies-vertical.jpg">
 
             <h2><strong>CAREERS</strong> IN THE INDUSTRY</h2>
-
-            <h3>The positive impact of gamification is increasingly being used in a diverse range of roles as a method of communication. Aside from the billion-dollar gaming industry, Gamer-Academy graduates find work in education and training, planning, corporate business, advertising and many other sectors.</h3>
-
-            <h3>Specific roles may include:</h3>
-            <ul>
-                <li>Game Designer</li>
-                <li>Game Producer</li>
-                <li>Creative Director</li>
-                <li>Level Designer</li>
-                <li>Concept Artist</li>
-                <li>Texture Artist</li>
-                <li>Environment Artist</li>
-                <li>Character Artist</li>
-                <li>Animator</li>
-                <li>Modeller</li>
-                <li>Technical Director</li>
-                <li>Interface Artist</li>
-                <li>Story Writer</li>
-                <li>Production Manager</li>
-            </ul>          
+            <div class="container">
+                <div class="box">
+                    <p>The positive impact of gamification is increasingly being used in a diverse range of roles as a method of communication. Aside from the billion-dollar gaming industry, Gamer-Academy graduates find work in education and training, planning, corporate business, advertising and many other sectors.</p>
+                </div>
+                <div class="box">
+                    <h3>Specific roles may include:</h3>
+                    <ul id="careers">
+                        <li>Game Designer</li>
+                        <li>Game Producer</li>
+                        <li>Creative Director</li>
+                        <li>Level Designer</li>
+                        <li>Concept Artist</li>
+                        <li>Texture Artist</li>
+                        <li>Environment Artist</li>
+                        <li>Character Artist</li>
+                        <li>Animator</li>
+                        <li>Modeller</li>
+                        <li>Technical Director</li>
+                        <li>Interface Artist</li>
+                        <li>Story Writer</li>
+                        <li>Production Manager</li>
+                    </ul> 
+                </div>
+            </div>         
         </section>
 
+        </section>
+
+        <div id="Apply"></div>
+
+        <section class="form">
+            <h2>WHY WAIT? <strong>FIND OUT MORE</strong></h2>
+            <form>
+                <label for="fname">First Name</label>
+                <input type="text" name="fname" id="fname">
+                <br>
+                <label for="sname">Last Name</label>
+                <input type="text" name="sname" id="sname">
+                <br>
+                <label for="email">Email Address</label>
+                <input type="text" name="email" id="email">
+                <br>
+                <label for="phone">Phone Number</label>
+                <input type="text" name="phone" id="phone">
+                <br>
+                <label for="age">What is your current age</label>
+                <input type="number" name="age" id="age">
+                <br>
+                <label for="where">Where would you like to study</label><br>
+                <select name="where" id="where">
+                    <option value="Sydney">Sydney</option>
+                    <option value="Melbourne">Melbourne</option>
+                    <option value="Brisbane">Brisbane</option>
+                </select>
+                <br>
+                <label for="course">What course are you interested in</label><br>
+                <select name="course" id="course">
+                    <option value="BCA">Bachelor of Creative Arts (Game Design)</option>
+                    <option value="DCA">Diploma of Creative Arts (Game Design)</option>
+                    <option value="CG">Coding for Games (Game Programming)</option>
+                    <option value="GCB">Game Creation Bootcamp (Game Creation)</option>
+                </select>
+                <br>
+                <p>When would you like to start</p>
+                <input type="radio" id="december" name="start" value="december">
+                <label for="december">December</label>
+                <input type="radio" id="september" name="start" value="september">
+                <label for="september">September</label>
+                <input type="radio" id="june" name="start" value="june">
+                <label for="june">June</label>
+                <br>
+                <input type="submit">
+            </form>
         </section>
 
     </main>
+
+    <footer>
+        <section class="footer">
+            <p>&copy;Gamer-Academy 2021</p>
+            <nav class="social">
+                <a href="#" class="fa fa-facebook fa-2x"></a>
+                <a href="#" class="fa fa-twitter fa-2x"></a>
+                <a href="#" class="fa fa-youtube fa-2x"></a>
+                <a href="#" class="fa fa-instagram fa-2x"></a>
+            </nav>
+            <nav class="social-small">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-youtube"></a>
+                <a href="#" class="fa fa-instagram"></a>
+            </nav>
+        </section>
+    </footer>
 
 </body>
 
