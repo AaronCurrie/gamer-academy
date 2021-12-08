@@ -46,7 +46,7 @@ header {
             animation-iteration-count: infinite;
 }
 
-nav {
+.mainnav {
     width: 60%;
     display: flex;
     justify-content: flex-end;
@@ -79,6 +79,46 @@ nav .apply {
 nav .apply:hover {
     background-color: rgba(128, 0, 128, 0);
     color: var(--main-pink);
+    cursor: pointer;
+}
+
+.mobilenav {
+    display: none;
+    height: 80px;
+    position:absolute;
+    top: 10px;
+    right: -150px;
+    transition: all 0.5s linear;
+}
+
+.mobilenav:focus {
+    transform: translateX(-150px);
+}
+
+.hidden a{
+    padding: 10px;
+    display: block;
+    background-color: var(--main-blue);
+}
+
+nav .menu {
+    border-radius: 5px;
+    background-color: rgb(12, 155, 180);
+    padding: 10px;
+    transition: all 0.5s linear;
+    color: white;
+}
+
+nav .menu:hover {
+    background-color: rgba(128, 0, 128, 0);
+    color: rgba(128, 0, 128, 0);
+    cursor: pointer;
+}
+
+nav .menu:focus {
+    background-color: rgba(128, 0, 128, 0);
+    color: rgba(128, 0, 128, 0);
+    cursor: pointer;
 }
 
 /* Page load animation*/
@@ -566,21 +606,16 @@ footer {
         display: inherit;
     }
 
-    .logo {
+    .mainnav {
         display: none;
     }
 
-    header{
-        height: 200px;
+    .mobilenav {
+        display: inherit;
     }
 
-    nav {
-        width: 100%;
-    }
-
-    nav a{
-        margin: 0 2%;
-        font-size: 1.1rem;
+    .logo img{
+        height: 120px;
     }
 
     .course {
@@ -589,6 +624,7 @@ footer {
 
     .box {
        max-width: 90%;
+       min-width: 250px;
     }
 
     .box #careers{
@@ -597,6 +633,11 @@ footer {
 
     section {
         width:90%;
+    }
+
+    .box #careers{
+        gap: 10px;
+        grid-template: 1.5rem / 1fr;
     }
 
 }
