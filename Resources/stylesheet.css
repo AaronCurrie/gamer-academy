@@ -122,6 +122,14 @@ nav .menu:focus {
 }
 
 /* Page load animation*/
+@-webkit-keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 @keyframes fadein {
     0% {
         opacity: 0;
@@ -147,7 +155,8 @@ nav .menu:focus {
     grid-area: 2 / 1 / span 1 / span 6;
     border-radius: 10px;
     width: 100%;  
-    animation: 4s ease-in 0s 1 fadein;
+    -webkit-animation: 4s ease-in 0s 1 fadein;  
+            animation: 4s ease-in 0s 1 fadein;
 }
 
 .button a {
